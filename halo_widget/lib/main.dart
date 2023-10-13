@@ -12,7 +12,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Klee",
       theme: ThemeData(primarySwatch: Colors.lime),
-      home: Scaffold(
+      home: FirstScreen
+    )
+  }
+}
+
+class FirstScreen extends StatelessWidget {
+  const FirstScreen
+  ({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
         appBar: AppBar(
           title: const Text("Klee"),
         ),
