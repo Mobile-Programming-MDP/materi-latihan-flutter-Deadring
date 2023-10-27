@@ -1,9 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget{
-  const SignInScreen({super.key});
+   SignInScreen({super.key});
 
   // todo 1 deklarasi variabel
   final TextEditingController _usernameController = TextEditingController();
@@ -20,6 +18,9 @@ class SignInScreen extends StatelessWidget{
       appBar: AppBar(title: Text('Sign In'),),
       //todo pasang body
 body: Center(
+  child: SingleChildScrollView(
+  child: Padding(
+    padding: const EdgeInsets.all(16),
   child: Form(
     child: Column(
       //todo 4
@@ -33,7 +34,7 @@ body: Center(
             labelText: "nama Pengguna",
             border: OutlineInputBorder(),
           ),
-        )
+        ),
         // todo 6
         SizedBox(height: 20),
         TextFormField(
@@ -48,15 +49,15 @@ body: Center(
                 _obscurePassword ? Icons.visibility_off : Icons.visibility,
               ),
             ),
-            obsureText: _obscurePassword,
+            obscureText: _obscurePassword,
           ),
-        )
+        ),
         // todo 7
         SizedBox(height: 20),
         ElevatedButton(
           onPressed: (){},
           child: Text('Sign In'),
-        )
+        ),
         //todo 8
         SizedBox(height: 10),
         RichText(
@@ -65,14 +66,14 @@ body: Center(
             style: TextStyle(fontSize: 16, color: Colors.deepPurple),
             children: <TextSpan>[
               TextSpan(
-                Text: 'Daftar Sini.',
-              Style: TextStyle(
-                Color: Colors.blue,
-                Decoration: TextDecoration.underLine,
-                fontSize: 16
+                text: 'Daftar Sini.',
+                style: TextStyle(
+                  color: Colors.amber,
+                  decoration: TextDecoration.underline,
+                  fontSize: 16
+              ),
+              recognizer: TapGestureRecognizer() ..onTap = (){},
               )
-              )
-              
             ]
           ),
         )
