@@ -17,7 +17,6 @@ class Candi {
     required this.imageAsset,
     required this.imageUrls,
     this.isFavorite = false,
+    
   });
-
 }
-
